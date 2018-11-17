@@ -1,5 +1,9 @@
-﻿namespace MoviesLibrary.Common.Enums
+﻿
+namespace MoviesLibrary.Common.Enums
 {
+    using System;
+
+    [Flags]
     public enum MovieGenres
     {
         Comedy,

@@ -8,9 +8,9 @@
     {
         public Movie()
         {
-            this.Stars = new List<Actor>();
+            this.Stars = new HashSet<Actor>();
             this.Comments = new List<Comment>();
-            this.Genre = new List<MovieGenres>();
+            this.Genre = new HashSet<MovieGenres>();
         }
 
         public int Id { get; set; }

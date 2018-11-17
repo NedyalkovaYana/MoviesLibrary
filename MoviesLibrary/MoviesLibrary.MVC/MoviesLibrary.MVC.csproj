@@ -16,4 +16,8 @@
     <Folder Include="Areas\Administrator\Views\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MoviesLibrary.Models\MoviesLibrary.Models.csproj" />
+  </ItemGroup>
+
 </Project>

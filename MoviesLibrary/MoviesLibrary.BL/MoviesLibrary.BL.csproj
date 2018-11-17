@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MoviesLibrary.Data\MoviesLibrary.Data.csproj" />
+    <ProjectReference Include="..\MoviesLibrary.ViewModels\MoviesLibrary.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>
