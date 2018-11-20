@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MoviesLibrary.Data\MoviesLibrary.Data.csproj" />
     <ProjectReference Include="..\MoviesLibrary.ViewModels\MoviesLibrary.ViewModels.csproj" />
   </ItemGroup>

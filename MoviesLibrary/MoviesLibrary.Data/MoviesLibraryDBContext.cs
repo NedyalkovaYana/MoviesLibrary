@@ -1,24 +1,36 @@
-﻿namespace MoviesLibrary.Data
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
+namespace MoviesLibrary.Data
 {
     using MoviesLibrary.Models;
     using Microsoft.EntityFrameworkCore;
     using MoviesLibrary.Common.Enums;
 
-    public class MoviesLibraryDBContext : DbContext
+    public class MoviesLibraryDbContext : IdentityDbContext, IMoviesLibraryDBContext
     {
-        public MoviesLibraryDBContext(DbContextOptions options)
+
+        public MoviesLibraryDbContext(DbContextOptions options)
             : base(options)
         {
         }
-        public MoviesLibraryDBContext()
+        public MoviesLibraryDbContext()
         {
         }
 
+        public DbSet<T> Set<T>() where T : class
+        {
+            return base.Set<T>();
+        }
+
+        public void SaveChanges()
+        {
+            base.SaveChanges();
+        }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<Movie> Movies { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Movie> Movies { get; set; }
         public DbSet<UserAccount> UserAccounts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

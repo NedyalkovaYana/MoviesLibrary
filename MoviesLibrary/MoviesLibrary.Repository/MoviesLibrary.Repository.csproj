@@ -6,10 +6,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MoviesLibrary.Common\MoviesLibrary.Common.csproj" />
+    <ProjectReference Include="..\MoviesLibrary.Data\MoviesLibrary.Data.csproj" />
   </ItemGroup>
 
 </Project>
