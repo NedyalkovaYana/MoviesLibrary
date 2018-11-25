@@ -1,4 +1,6 @@
-﻿namespace MoviesLibrary.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MoviesLibrary.Models
 {
     using System;
     using System.Collections.Generic;
@@ -10,7 +12,7 @@
         {
             this.Stars = new HashSet<Actor>();
             this.Comments = new List<Comment>();
-            this.Genre = new HashSet<MovieGenres>();
+            this.Genres = new HashSet<MovieGenres>();
         }
 
         public int Id { get; set; }
@@ -30,9 +32,16 @@
 
         public string Writer { get; set; }
 
-        public IEnumerable<MovieGenres> Genre { get; set; }
+        [NotMapped]
+        public IEnumerable<MovieGenres> Genres { get; set; }
 
+        public int StarId { get; set; }
+
+        [NotMapped]
         public IEnumerable<Actor> Stars { get; set; }
+
+        [ForeignKey("Comment")]
+        public int CommentId { get; set; }
 
         public IEnumerable<Comment> Comments { get; set; }
 

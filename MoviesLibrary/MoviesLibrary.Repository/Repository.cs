@@ -1,20 +1,21 @@
-﻿using System.Linq;
+﻿
 
 namespace MoviesLibrary.Repository
 {
 
     using System;
-    using System.Collections.Generic;
-    using System.Linq.Expressions;
+    using System.Linq;
     using MoviesLibrary.Data;
+    using System.Linq.Expressions;
+    using System.Collections.Generic;
     using Microsoft.EntityFrameworkCore;
 
     public class Repository<T> : IRepository<T>
         where T : class
     {
-        private readonly IMoviesLibraryDBContext _context;
+        private readonly IMoviesLibraryDbContext _context;
         private readonly DbSet<T> Set;
-        public Repository(IMoviesLibraryDBContext context)
+        public Repository(IMoviesLibraryDbContext context)
         {
             this._context = context;
             this.Set = context.Set<T>();
@@ -64,6 +65,11 @@ namespace MoviesLibrary.Repository
         public void Delete(object id)
         {
             throw new NotImplementedException();
+        }
+
+        public void Save()
+        {
+            this._context.SaveChanges();
         }
     }
 }

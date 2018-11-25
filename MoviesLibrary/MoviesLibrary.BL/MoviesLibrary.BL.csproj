@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MoviesLibrary.Data\MoviesLibrary.Data.csproj" />
+    <ProjectReference Include="..\MoviesLibrary.Repository\MoviesLibrary.Repository.csproj" />
     <ProjectReference Include="..\MoviesLibrary.ViewModels\MoviesLibrary.ViewModels.csproj" />
   </ItemGroup>
 

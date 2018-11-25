@@ -28,7 +28,7 @@
 
         public bool RegisterUser(UserAccountViewModel account)
         {
-            this._context.UserAccounts.Add(account);
+           // this._context.UserAccounts.Add(account);
 
             return true;
         }

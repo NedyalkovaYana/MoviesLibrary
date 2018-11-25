@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MoviesLibrary.ViewModels.Account
+namespace MoviesLibrary.Common.Exceptions
 {
-    class Class1
+    public class AppException
     {
     }
 }

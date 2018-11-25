@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MoviesLibrary.Data\MoviesLibrary.Data.csproj" />
     <ProjectReference Include="..\MoviesLibrary.Models\MoviesLibrary.Models.csproj" />
   </ItemGroup>
 

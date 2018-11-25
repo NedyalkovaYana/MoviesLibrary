@@ -4,7 +4,7 @@
 
     public class UserAccount
     {
-        public int UserId { get; set; }
+        public int UserAccountId { get; set; }
 
         public string FirstName { get; set; }
 
